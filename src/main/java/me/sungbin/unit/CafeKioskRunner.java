@@ -2,6 +2,9 @@ package me.sungbin.unit;
 
 import me.sungbin.unit.beverage.Americano;
 import me.sungbin.unit.beverage.Latte;
+import me.sungbin.unit.order.Order;
+
+import java.time.LocalDateTime;
 
 public class CafeKioskRunner {
     public static void main(String[] args) {
@@ -14,5 +17,7 @@ public class CafeKioskRunner {
 
         int totalPrice = cafeKiosk.calculateTotalPrice();
         System.out.println("충 주문 가격: " + totalPrice);
+
+        Order order = cafeKiosk.createOrder(LocalDateTime.now());
     }
 }
