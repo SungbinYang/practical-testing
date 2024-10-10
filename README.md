@@ -20,3 +20,7 @@
 - 테스트 케이스 세분화하기
 - 테스트하기 어려운 영역을 분리하기
 - 키워드 정리
+
+### TDD: Test Driven Development
+
+- TDD: Test Driven Development
