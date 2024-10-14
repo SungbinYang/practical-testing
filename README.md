@@ -38,3 +38,4 @@
 - 레이어드 아키텍쳐(Layered Architecture)와 테스트
 - Spring / JPA 훑어보기 & 기본 엔티티 설계
 - Persistence Layer 테스트 (1)
+- Persistence Layer 테스트 (2)
