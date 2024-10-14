@@ -32,3 +32,7 @@
 - DisplayName을 섬세하게
 - BDD 스타일로 작성하기
 - 키워드 정리
+
+### Spring & JPA 테스트
+
+- 레이어드 아키텍쳐(Layered Architecture)와 테스트
