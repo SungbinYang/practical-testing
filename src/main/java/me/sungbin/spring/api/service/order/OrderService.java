@@ -2,6 +2,7 @@ package me.sungbin.spring.api.service.order;
 
 import lombok.RequiredArgsConstructor;
 import me.sungbin.spring.api.controller.order.request.OrderCreateRequest;
+import me.sungbin.spring.api.service.order.request.OrderCreateServiceRequest;
 import me.sungbin.spring.api.service.order.response.OrderResponse;
 import me.sungbin.spring.domain.order.Order;
 import me.sungbin.spring.domain.order.OrderRepository;
@@ -34,7 +35,7 @@ public class OrderService {
      * 재고 감소 -> 동시성 고민
      * optimistic lock / pessimistic lock / ...
      */
-    public OrderResponse createOrder(OrderCreateRequest request, LocalDateTime registeredDateTime) {
+    public OrderResponse createOrder(OrderCreateServiceRequest request, LocalDateTime registeredDateTime) {
         List<String> productNumbers = request.getProductNumbers();
         List<Product> products = findProductsBy(productNumbers);
 

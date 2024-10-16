@@ -1,6 +1,8 @@
 package me.sungbin.spring.api.controller.product;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import me.sungbin.spring.api.ApiResponse;
 import me.sungbin.spring.api.controller.product.dto.request.ProductCreateRequest;
 import me.sungbin.spring.api.service.product.ProductService;
 import me.sungbin.spring.api.service.product.response.ProductResponse;
@@ -18,12 +20,12 @@ public class ProductController {
     private final ProductService productService;
 
     @PostMapping("/api/v1/products/new")
-    public void createProduct(@RequestBody ProductCreateRequest request) {
-        productService.createProduct(request);
+    public ApiResponse<ProductResponse> createProduct(@Valid @RequestBody ProductCreateRequest request) {
+        return ApiResponse.ok(productService.createProduct(request.toServiceRequest()));
     }
 
     @GetMapping("/api/v1/products/selling")
-    public List<ProductResponse> getSellingProducts() {
-        return productService.getSellingProducts();
+    public ApiResponse<List<ProductResponse>> getSellingProducts() {
+        return ApiResponse.ok(productService.getSellingProducts());
     }
 }

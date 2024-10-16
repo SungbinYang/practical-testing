@@ -2,6 +2,7 @@ package me.sungbin.spring.api.service.product;
 
 import lombok.RequiredArgsConstructor;
 import me.sungbin.spring.api.controller.product.dto.request.ProductCreateRequest;
+import me.sungbin.spring.api.service.product.request.ProductCreateServiceRequest;
 import me.sungbin.spring.api.service.product.response.ProductResponse;
 import me.sungbin.spring.domain.product.Product;
 import me.sungbin.spring.domain.product.ProductRepository;
@@ -27,7 +28,7 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     @Transactional
-    public ProductResponse createProduct(ProductCreateRequest request) {
+    public ProductResponse createProduct(ProductCreateServiceRequest request) {
         String nextProductNumber = createNextProductNumber();
 
         Product product = request.toProduct(nextProductNumber);
