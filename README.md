@@ -45,3 +45,7 @@
 - Presentation Layer 테스트 (1)
 - Presentation Layer 테스트 (2)
 - 키워드 정리
+
+### Mock을 마주하는 자세
+
+- Mockito로 Stubbing하기
