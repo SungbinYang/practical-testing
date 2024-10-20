@@ -1,41 +1,25 @@
 package me.sungbin.spring.api.controller.order;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import me.sungbin.spring.ControllerTestSupport;
 import me.sungbin.spring.api.controller.order.request.OrderCreateRequest;
-import me.sungbin.spring.api.service.order.OrderService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(OrderController.class)
-class OrderControllerTest {
-
-    @Autowired
-    private MockMvc mockMvc;
-
-    @Autowired
-    private ObjectMapper objectMapper;
-
-    @MockBean
-    private OrderService orderService;
+class OrderControllerTest extends ControllerTestSupport {
 
     @Test
     @DisplayName("신규 주문을 등록한다.")
     void createOrder() throws Exception {
-       // given
+        // given
         OrderCreateRequest request = OrderCreateRequest.builder()
                 .productNumbers(List.of("001"))
                 .build();

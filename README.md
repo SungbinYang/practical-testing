@@ -65,3 +65,4 @@
 - Test Fixture 클렌징
 - @ParameterizedTest
 - @DynamicTest
+- 테스트 수행도 비용이다. 환경 통합하기

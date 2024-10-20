@@ -1,6 +1,6 @@
 package me.sungbin.spring.api.service.order;
 
-import me.sungbin.spring.api.controller.order.request.OrderCreateRequest;
+import me.sungbin.spring.IntegrationTestSupport;
 import me.sungbin.spring.api.service.order.request.OrderCreateServiceRequest;
 import me.sungbin.spring.api.service.order.response.OrderResponse;
 import me.sungbin.spring.domain.order.OrderRepository;
@@ -14,8 +14,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -24,9 +22,7 @@ import static me.sungbin.spring.domain.product.ProductSellingStatus.SELLING;
 import static me.sungbin.spring.domain.product.ProductType.*;
 import static org.assertj.core.api.Assertions.*;
 
-@SpringBootTest
-@ActiveProfiles("test")
-class OrderServiceTest {
+class OrderServiceTest extends IntegrationTestSupport {
 
     @Autowired
     private ProductRepository productRepository;

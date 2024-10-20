@@ -1,5 +1,6 @@
 package me.sungbin.spring.api.service.product;
 
+import me.sungbin.spring.IntegrationTestSupport;
 import me.sungbin.spring.api.service.product.request.ProductCreateServiceRequest;
 import me.sungbin.spring.api.service.product.response.ProductResponse;
 import me.sungbin.spring.domain.product.Product;
@@ -8,8 +9,6 @@ import me.sungbin.spring.domain.product.ProductSellingStatus;
 import me.sungbin.spring.domain.product.ProductType;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
 
@@ -18,9 +17,7 @@ import static me.sungbin.spring.domain.product.ProductType.HANDMADE;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
-@SpringBootTest
-@ActiveProfiles("test")
-class ProductServiceTest {
+class ProductServiceTest extends IntegrationTestSupport {
 
     @Autowired
     private ProductService productService;
