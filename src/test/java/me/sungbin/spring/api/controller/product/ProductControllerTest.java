@@ -1,19 +1,14 @@
 package me.sungbin.spring.api.controller.product;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import me.sungbin.spring.ControllerTestSupport;
 import me.sungbin.spring.api.controller.product.dto.request.ProductCreateRequest;
-import me.sungbin.spring.api.service.product.ProductService;
 import me.sungbin.spring.api.service.product.response.ProductResponse;
 import me.sungbin.spring.domain.product.ProductSellingStatus;
 import me.sungbin.spring.domain.product.ProductType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
 
