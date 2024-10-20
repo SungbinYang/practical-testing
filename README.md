@@ -66,3 +66,4 @@
 - @ParameterizedTest
 - @DynamicTest
 - 테스트 수행도 비용이다. 환경 통합하기
+- Q. private 메서드의 테스트는 어떻게 하나요?
