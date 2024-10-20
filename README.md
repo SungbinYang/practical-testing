@@ -63,3 +63,4 @@
 - 테스트 간 독립성을 보장하자
 - 한 눈에 들어오는 Test Fixture 구성하기
 - Test Fixture 클렌징
+- @ParameterizedTest
